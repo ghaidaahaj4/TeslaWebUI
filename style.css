@@ -197,6 +197,7 @@ main section h3{
     width: 100vw;
     z-index: 2;
 }
+.buttons a{text-decoration: none;}
 
 .buttonOrder , .buttonDemo{
     cursor: pointer;
