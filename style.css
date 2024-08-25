@@ -5,6 +5,8 @@ body{
     
 }
 nav{
+    position: relative;
+    display:block;  
     height: 7vh;
     display: flex;
     flex-direction: row;
@@ -12,11 +14,19 @@ nav{
     align-items: center;
     padding-left:  2%;
     padding-right:  2%;
+
+
+    
+ 
 }
 header{
     width: 100vw;
     height: 5vh;
     background-color: transparent;
+    position:relative;
+    z-index: 2;
+    
+
 }
 
 /*logo*/
@@ -34,9 +44,14 @@ ul a{
     
 a {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-decoration: none; 
+}
+h1 a{
+    display: flex;
+    flex-direction: row;
 }
       
 a svg{
@@ -75,17 +90,29 @@ ul{
 }
 .tabs{
     flex: 0.3;
-    padding: 0;
-    margin: 0;
-    justify-content: space-between;
+    gap: 1vw;
  
 }
+.tabs li{
+    height: 4vh;
+    width: 5vw;
 
-
+}
+.tabs li a{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+  
+}
+.tabs li:hover{
+    background-color: rgba(162, 164, 167, 0.379);
+    border-radius: 0.5vh;
+}
   
 
 main{
-    position: relative; /* Establishes context for absolute positioning */
+    position: relative;
     margin-top: 80px; 
     height: 295vh;
     width: 100vw;
@@ -94,20 +121,29 @@ main{
     justify-content: space-around;
     padding: 0px;
     margin: 0px;
-
-}
-main section{
-    height: 100vh;
-    width: 100vw;
-
+    z-index: 1;
 }
 
+main section h1{
+    padding: 0;
+    margin: 0;
+    font-size: 7vh;
+}
+main section a{
+    padding: 0;
+    margin: 0;
+    color: white;
+    text-decoration: underline;
+    font-size: 3vh;
+}
+main section h3{
+    padding: 0;
+    margin: 0;
+}
 
 .Model3{
     position: absolute;
     top: -5vh;
-    z-index: -1;
-
     background-image: url(./assets/model3.avif);
     background-size: cover;
     background-attachment: fixed;
@@ -115,26 +151,78 @@ main section{
 }
 .ModelX{
     position: absolute;
-    top: 95vh;
+    top: 195vh;
     background-image: url(./assets/modelX.avif);
     background-size: cover;
     background-attachment: fixed;
 }
 .ModelY{
     position: absolute;
-    top: 195vh;
+    top: 95vh;
     background-image: url(./assets/moddlY.avif);
     background-size: cover;
     background-attachment: fixed;
 }
+
 .Model3, .ModelX, .ModelY {
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(255, 255, 255);
+
     background-attachment: scroll; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    z-index: 1;
+
 
 
   }
+  .Model3 .content, .ModelX .content, .ModelY .content{
+    height: 60vh;
+
+}
   
+.ModelX h5{
+    font-size: 3vh;
+    padding: 0;
+    margin: 0;
+}
+.ModelX a{
+    font-size: 2vh;
+    padding: 0;
+    margin: 0;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3vw;
+    height: fit-content;
+    width: 100vw;
+    z-index: 2;
+}
 
+.buttonOrder , .buttonDemo{
+    cursor: pointer;
+    border: none;
+    height: 4vh;
+    width: 20vw;
+    font-size:1.5vh;
+    border-radius: 0.5vh;
+}
 
+  .buttonOrder{
+    background-color: #3e6ae1;
+    color: white;
 
-
-  
+  }
+  .buttonDemo{
+    background-color: white;
+    color: black;
+  }
